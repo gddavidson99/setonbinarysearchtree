@@ -207,27 +207,6 @@ public abstract class SetTest {
         assertEquals(s, sExpected);
     }
 
-    /**
-     * Test remove from a set with multiple entries, the leaf value.
-     */
-    @Test
-    public final void removeFromSetWithMultipleEntriesLeafValueTest() {
-        /*
-         * ASSIGN
-         */
-        Set<String> s = this.createFromArgsTest("Test", "Alex", "Ben", "Wow");
-        Set<String> sExpected = this.createFromArgsRef("Test", "Ben", "Alex");
-        /*
-         * CALL
-         */
-        String removed = s.remove("Wow");
-        /*
-         * ASSERT
-         */
-        assertEquals(removed, "Wow");
-        assertEquals(s, sExpected);
-    }
-
     /*
      * REMOVE ANY TESTS --------------------------------------------------------
      */
@@ -283,7 +262,7 @@ public abstract class SetTest {
     }
 
     /*
-     * REMOVE ANY TESTS --------------------------------------------------------
+     * CONTAINS TESTS ----------------------------------------------------------
      */
 
     /**
@@ -295,6 +274,7 @@ public abstract class SetTest {
          * ASSIGN
          */
         Set<String> s = this.createFromArgsTest();
+        Set<String> sExpected = this.createFromArgsTest();
         /*
          * CALL
          */
@@ -302,6 +282,7 @@ public abstract class SetTest {
         /*
          * ASSERT
          */
+        assertEquals(sExpected, s);
         assertEquals(contains, false);
     }
 
@@ -314,6 +295,7 @@ public abstract class SetTest {
          * ASSIGN
          */
         Set<String> s = this.createFromArgsTest("Test");
+        Set<String> sExpected = this.createFromArgsTest("Test");
         /*
          * CALL
          */
@@ -321,6 +303,7 @@ public abstract class SetTest {
         /*
          * ASSERT
          */
+        assertEquals(sExpected, s);
         assertEquals(contains, true);
     }
 
@@ -334,6 +317,8 @@ public abstract class SetTest {
          */
         Set<String> s = this.createFromArgsTest("Test", "Wow", "Isn't", "This",
                 "Great?");
+        Set<String> sExpected = this.createFromArgsTest("Test", "Wow", "Isn't",
+                "This", "Great?");
         /*
          * CALL
          */
@@ -341,6 +326,7 @@ public abstract class SetTest {
         /*
          * ASSERT
          */
+        assertEquals(sExpected, s);
         assertEquals(contains, true);
     }
 
@@ -354,6 +340,8 @@ public abstract class SetTest {
          */
         Set<String> s = this.createFromArgsTest("Test", "Wow", "Isn't", "This",
                 "Great?");
+        Set<String> sExpected = this.createFromArgsTest("Test", "Wow", "Isn't",
+                "This", "Great?");
         /*
          * CALL
          */
@@ -361,6 +349,7 @@ public abstract class SetTest {
         /*
          * ASSERT
          */
+        assertEquals(sExpected, s);
         assertEquals(contains, false);
     }
 
