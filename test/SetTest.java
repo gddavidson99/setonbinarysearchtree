@@ -274,7 +274,7 @@ public abstract class SetTest {
          * ASSIGN
          */
         Set<String> s = this.createFromArgsTest();
-        Set<String> sExpected = this.createFromArgsTest();
+        Set<String> sExpected = this.createFromArgsRef();
         /*
          * CALL
          */
@@ -295,7 +295,7 @@ public abstract class SetTest {
          * ASSIGN
          */
         Set<String> s = this.createFromArgsTest("Test");
-        Set<String> sExpected = this.createFromArgsTest("Test");
+        Set<String> sExpected = this.createFromArgsRef("Test");
         /*
          * CALL
          */
@@ -317,7 +317,7 @@ public abstract class SetTest {
          */
         Set<String> s = this.createFromArgsTest("Test", "Wow", "Isn't", "This",
                 "Great?");
-        Set<String> sExpected = this.createFromArgsTest("Test", "Wow", "Isn't",
+        Set<String> sExpected = this.createFromArgsRef("Test", "Wow", "Isn't",
                 "This", "Great?");
         /*
          * CALL
@@ -340,7 +340,7 @@ public abstract class SetTest {
          */
         Set<String> s = this.createFromArgsTest("Test", "Wow", "Isn't", "This",
                 "Great?");
-        Set<String> sExpected = this.createFromArgsTest("Test", "Wow", "Isn't",
+        Set<String> sExpected = this.createFromArgsRef("Test", "Wow", "Isn't",
                 "This", "Great?");
         /*
          * CALL
